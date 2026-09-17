@@ -1,7 +1,15 @@
 {
+  "name": "vennetta-fitness",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd cliente && npm install && npm run build",
+    "start": "cd cliente && npm start"
+  },
   "dependencies": {
     "framer-motion": "^12.36.0",
     "react-icons": "^5.6.0",
     "react-router-dom": "^7.13.2"
   }
 }
+
