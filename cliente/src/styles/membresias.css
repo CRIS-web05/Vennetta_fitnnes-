@@ -1,0 +1,428 @@
+.planes{
+
+padding:260px 20px 100px; /* 🔥 BAJAMOS por navbar */
+text-align:center;
+background:#0a0a0a;
+
+}
+
+@media screen and (max-width: 1000px) {
+  .planes {
+    padding-top: 350px;
+  }
+}
+
+.planes h2{
+
+font-size:45px;
+color:white;
+margin-bottom:60px;
+font-weight:900;
+letter-spacing:2px;
+
+text-shadow:0 0 10px red;
+
+}
+
+/* 🔥 GRID MÁS PRO */
+.plan-cards{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+
+}
+
+/* 🔥 CARD */
+.plan{
+
+background:#111;
+padding:20px;
+width:260px;
+
+border-radius:15px;
+
+border:1px solid #222;
+
+transition:0.3s;
+
+display:flex;
+flex-direction:column;
+
+}
+
+/* 🔥 HOVER PRO */
+.plan:hover{
+
+transform:translateY(-10px) scale(1.03);
+border:1px solid red;
+
+box-shadow:0 0 25px rgba(255,0,0,0.3);
+
+}
+
+
+/* 🔥 TITULO */
+.plan h3{
+
+color:red;
+font-size:36px;
+margin-bottom:10px;
+
+}
+
+/* 🔥 PRECIO FUERTEMENTE SUBRAYADO Y RESALTADO */
+.price{
+  font-size: 26px; /* Más grande */
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 900; /* Super bold */
+  text-decoration: underline;
+  text-decoration-color: red; /* Raya roja abajo */
+  text-decoration-thickness: 4px; /* Raya gruesa */
+  text-underline-offset: 6px; /* Espacio entre letra y raya */
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+/* 🔥 TEXTO */
+.plan p{
+
+color:#ccc;
+font-size:20px;
+margin:5px 0;
+
+}
+
+/* 🔥 BOTÓN */
+.plan button{
+
+margin-top:auto;
+padding:10px 25px;
+
+background:rgb(255, 21, 21);
+border:none;
+
+border-radius:25px;
+
+color:white;
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+font-size:19px;
+}
+
+/* 🔥 HOVER BOTÓN */
+.plan button:hover{
+
+background:#ff2a2a;
+transform:scale(1.05);
+
+box-shadow:0 0 15px red;
+
+}
+
+/* 🔥 INFO BOX */
+.info-box{
+
+margin-top:60px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+
+background:#111;
+padding:25px;
+
+border-radius:10px;
+border:1px solid #222;
+
+}
+
+.info-box h3{
+
+color:red;
+margin-bottom:20px;
+font-size:35px;
+}
+
+.info-box p{
+
+color:#ccc;
+line-height:1.6;
+font-size:20px;
+}
+
+/* 🔥 MAPA */
+.mapa-planes{
+
+margin-top:40px;
+
+}
+
+.mapa-planes h2{
+font-size:45px;
+color:white;
+margin-bottom:40px;
+font-weight:900;
+letter-spacing:2px;
+text-shadow:0 0 10px red;
+}
+
+.mapa-planes .mapa{
+
+max-width:900px;
+
+margin:auto;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,0,0,0.5);
+
+}
+
+/* 🔥 ENTRENADORES MINI */
+.trainers-mini{
+
+margin-top:100px;
+
+}
+
+.trainers-mini h2{
+
+font-size:45px;
+color:white;
+margin-bottom:60px;
+font-weight:900;
+letter-spacing:2px;
+
+text-shadow:0 0 10px red;
+
+}
+
+/* ESTILOS DE LA CARTA DEL ENTRENADOR (MÁS PROFESIONAL Y LLAMATIVO) */
+.trainers-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 60px;
+}
+
+/* ELEGANTE LAYOUT CREEDNCIAL AMPLIADO */
+.trainer-card {
+  box-sizing: border-box; /* Previene que el ancho se salga de la pantalla */
+  background: linear-gradient(145deg, #111, #050505);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px; /* Más ancho para el currículum */
+  border: 1px solid rgba(255,0,0,0.3);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8), inset 0 0 10px rgba(255,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* Columna para acomodar textos largos */
+  align-items: center;
+  padding: 40px 30px;
+  gap: 15px;
+  transition: 0.4s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,0,0,0.6);
+  box-shadow: 0 20px 50px rgba(255,0,0,0.2);
+}
+
+/* AVATAR PROFESIONAL PERFECTO */
+.trainer-image-container {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid red; 
+  box-shadow: 0 0 25px rgba(255,0,0,0.4);
+  margin-bottom: 5px;
+}
+
+.trainer-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: top center; 
+  display: block;
+}
+
+/* TEXTO ELEGANTE */
+.trainer-info {
+  width: 100%;
+  text-align: center;
+}
+
+.trainer-info h4 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,0,0,0.3);
+}
+
+.trainer-info .trainer-role {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+/* ESTILOS DEL NUEVO CURRÍCULUM LLAMATIVO */
+.trainer-bio-premium {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.bio-highlight {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.bio-history {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  padding: 0 20px;
+}
+
+.bio-history strong {
+  color: #fff;
+}
+
+.cert-title {
+  font-size: 24px;
+  color: #ffd700;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cert-list {
+  box-sizing: border-box; /* Ajuste correcto de bordes */
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.cert-list li {
+  box-sizing: border-box; /* Previene que los paddings rompan todo y choquen entre sí */
+  background: rgba(255,0,0,0.04);
+  border: 1px solid rgba(255,0,0,0.2);
+  padding: 15px 20px;
+  border-radius: 12px;
+  width: 100%;
+  text-align: left;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; /* Mantiene letras adentro sin salirse de márgenes */
+}
+
+.cert-list li:hover {
+  background: rgba(255,0,0,0.15);
+  border-color: red;
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(255,0,0,0.4);
+}
+
+.cert-list li strong {
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cert-list li span {
+  color: #aaa;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .trainer-card {
+    padding: 30px 15px;
+  }
+  .cert-list {
+    grid-template-columns: 1fr 1fr; /* Mantiene izquierda y derecha en moviles grandes y tablets */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cert-list {
+    grid-template-columns: 1fr; /* Si la pantalla es microscópica, forzosamente 1 para que no se monten las letras */
+  }
+  .bio-history {
+    padding: 0;
+    font-size: 16px;
+  }
+  .trainer-info h4 {
+    font-size: 24px;
+  }
+}
+
+/* 🔥 MODAL FLOTANTE */
+.membresia-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.membresia-modal-content {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  border-radius: 20px;
+  animation: modalIn 0.3s ease-out forwards;
+}
+
+@keyframes modalIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-modal-btn:hover {
+  color: red;
+}

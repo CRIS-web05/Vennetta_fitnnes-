@@ -1,0 +1,70 @@
+.language-selector-global {
+  position: fixed;
+  top: 170px;
+  right: 18px;
+  z-index: 100007;
+}
+
+.language-selector-global-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  background: rgba(0,0,0,0.72);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.language-selector-global-btn:hover,
+.language-selector-global-btn:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255,0,0,0.85);
+}
+
+.language-selector-global-arrow {
+  margin-left: 6px;
+}
+
+.language-selector-global-menu {
+  margin-top: 10px;
+  min-width: 220px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: rgba(15,15,15,0.96);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+  padding: 8px;
+}
+
+.language-selector-global-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.language-selector-global-option.selected,
+.language-selector-global-option:hover,
+.language-selector-global-option:focus-visible {
+  background: rgba(255,0,0,0.18);
+}
+
+@media (max-width: 600px) {
+  .language-selector-global {
+    right: 12px;
+    top: 210px;
+  }
+}

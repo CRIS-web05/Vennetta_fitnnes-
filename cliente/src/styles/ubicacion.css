@@ -1,0 +1,45 @@
+.ubicacion{
+
+padding:100px 20px;
+
+background:#0d0d0d;
+
+text-align:center;
+
+}
+
+.ubicacion h2{
+
+color:white;
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.direccion{
+
+color:#ccc;
+
+font-size:20px;
+
+margin-bottom:40px;
+
+line-height:1.6;
+
+}
+
+.mapa{
+
+max-width:900px;
+
+margin:auto;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,0,0,0.5);
+
+}

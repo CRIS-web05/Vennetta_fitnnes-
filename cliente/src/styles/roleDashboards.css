@@ -1,0 +1,936 @@
+.role-db-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+}
+
+.role-db-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  border-radius: 14px;
+  background: #1f2833;
+  border-left: 6px solid #ff4b4b;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.role-db-header.superadmin { border-left-color: #ff2a2a; }
+.role-db-header.admin_gym { border-left-color: #ff6b35; }
+.role-db-header.recepcionista { border-left-color: #4ecdc4; }
+.role-db-header.entrenador { border-left-color: #45b7d1; }
+.role-db-header.nutricionista { border-left-color: #96ceb4; }
+.role-db-header.contador { border-left-color: #feca57; }
+.role-db-header.gerente { border-left-color: #a29bfe; }
+
+.role-db-header h2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.role-db-header p {
+  color: #a0a5ab;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.role-refresh-btn,
+.role-action-btn {
+  background: #ff4b4b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.role-refresh-btn:hover,
+.role-action-btn:hover {
+  background: #e03e3e;
+}
+
+.role-stats-bar,
+.role-metrics-three {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat-pill,
+.role-metric-card {
+  background: #1f2833;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.metric-ico {
+  font-size: 2.2rem;
+  color: #ff4b4b;
+}
+
+.role-metric-card.ingreso .metric-ico { color: #4ecca3; }
+.role-metric-card.egreso .metric-ico { color: #ff4b4b; }
+.role-metric-card.balance .metric-ico { color: #feca57; }
+
+.stat-pill div span,
+.role-metric-card div h4 {
+  font-size: 0.85rem;
+  color: #9aa0a6;
+  display: block;
+}
+
+.stat-pill div strong,
+.role-metric-card div h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.role-tab-nav {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #2e3846;
+  padding-bottom: 8px;
+}
+
+.role-tab-nav button {
+  background: transparent;
+  color: #a0a5ab;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.2s;
+}
+
+.role-tab-nav button.active,
+.role-tab-nav button:hover {
+  color: #ffffff;
+  background: #2e3846;
+}
+
+.role-content-box {
+  background: #1f2833;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.role-content-box h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.superadmin-modules-grid,
+.roles-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.sa-mod-card,
+.role-card-mini {
+  background: #0b0c10;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 16px;
+  border-left: 4px solid #ff4b4b;
+}
+
+.sa-mod-card h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.sa-mod-card p {
+  color: #9aa0a6;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.role-tag-badge {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.role-slug-code {
+  color: #a0a5ab;
+  font-size: 0.85rem;
+}
+
+.audit-log-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.audit-log-list li {
+  background: #0b0c10;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.reception-toolbar {
+  margin-bottom: 20px;
+}
+
+.search-input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0b0c10;
+  border: 1px solid #3b4252;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #a0a5ab;
+}
+
+.search-input-box input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 100%;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.role-table th,
+.role-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #2e3846;
+  font-size: 0.9rem;
+}
+
+.role-table th {
+  color: #a0a5ab;
+  font-weight: 600;
+}
+
+.role-badge-plan {
+  background: rgba(255, 75, 75, 0.2);
+  color: #ff4b4b;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.role-status-chip {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.role-status-chip.activo { background: rgba(78, 204, 163, 0.2); color: #4ecca3; }
+.role-status-chip.pendiente { background: rgba(254, 202, 87, 0.2); color: #feca57; }
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-checkin {
+  background: #4ecca3;
+  color: #0b0c10;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-checkout {
+  background: #ff4b4b;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.role-alert-success {
+  background: rgba(78, 204, 163, 0.15);
+  border: 1px solid #4ecca3;
+  color: #4ecca3;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.trainer-grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .trainer-grid-two {
+    grid-template-columns: 1fr;
+  }
+}
+
+.role-mini-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.role-mini-form label {
+  font-size: 0.85rem;
+  color: #c5c6c7;
+  font-weight: 600;
+}
+
+.role-mini-form input,
+.role-mini-form select,
+.role-mini-form textarea {
+  background: #0b0c10;
+  border: 1px solid #3b4252;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.role-save-btn {
+  background: #ff4b4b;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  background: #0b0c10;
+  border-radius: 8px;
+  padding: 14px;
+  border-left: 3px solid #ff4b4b;
+}
+
+.history-item div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.measure-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.measure-pills span {
+  background: #1f2833;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: #a0a5ab;
+}
+
+.txt-green { color: #4ecca3; font-weight: 700; }
+.txt-red { color: #ff4b4b; font-weight: 700; }
+
+.plan-desc-text {
+  font-size: 0.88rem;
+  color: #d1d5db;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.gerente-summary {
+  font-size: 1.05rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* ENTRENADORES SUPERADMIN STYLES */
+.sa-trainer-header-bar {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+}
+
+.trainers-superadmin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.trainer-sa-card {
+  background: #151c24;
+  border: 1px solid rgba(255, 42, 42, 0.3);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.trainer-sa-card:hover {
+  transform: translateY(-3px);
+  border-color: #ff2a2a;
+}
+
+.trainer-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.trainer-avatar-badge {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 42, 42, 0.15);
+  border: 2px solid #ff2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.trainer-card-header h4 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.trainer-role-sub {
+  font-size: 0.8rem;
+  color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.trainer-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+  background: #0d1217;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.trainer-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.info-label {
+  color: #9aa0a6;
+}
+
+.info-val-highlight {
+  color: #ff2a2a;
+  font-weight: 700;
+}
+
+.sa-more-info-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ff2a2a, #cc0000);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.sa-more-info-btn:hover {
+  opacity: 0.9;
+}
+
+/* MODAL DE MÁS INFORMACIÓN DEL ENTRENADOR */
+.sa-trainer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sa-trainer-modal {
+  background: #171e26;
+  border: 2px solid #ff2a2a;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(255, 42, 42, 0.25);
+  overflow: hidden;
+}
+
+.sa-modal-head {
+  background: #0d1217;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sa-modal-head h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.sa-modal-close-btn {
+  background: transparent;
+  border: none;
+  color: #aaaaaa;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.sa-modal-close-btn:hover {
+  color: #ffffff;
+}
+
+.sa-trainer-detail-body {
+  padding: 24px;
+}
+
+.detail-badge-top {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.badge-tag {
+  background: rgba(255, 42, 42, 0.15);
+  color: #ff2a2a;
+  border: 1px solid #ff2a2a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.badge-status {
+  background: rgba(78, 204, 163, 0.15);
+  color: #4ecca3;
+  border: 1px solid #4ecca3;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.detail-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.detail-field {
+  background: #0f141a;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-field.highlight-box {
+  border-color: rgba(255, 42, 42, 0.4);
+  background: rgba(255, 42, 42, 0.05);
+}
+
+.detail-field label {
+  display: block;
+  font-size: 0.78rem;
+  color: #888888;
+  margin-bottom: 4px;
+}
+
+.detail-val-text {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.bold-red {
+  color: #ff2a2a !important;
+  font-weight: bold !important;
+}
+
+.sa-modal-foot {
+  background: #0d1217;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sa-btn-close-modal {
+  background: #2b3542;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sa-btn-close-modal:hover {
+  background: #3c495c;
+}
+
+/* === SUPERADMIN TABLERO DE COMANDO TOTAL (VER TODO) === */
+.sa-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.role-cmd-board-btn {
+  background: linear-gradient(135deg, #ff2a2a 0%, #b30000 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(255, 42, 42, 0.4);
+  transition: all 0.25s ease;
+}
+
+.role-cmd-board-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 42, 42, 0.65);
+  background: linear-gradient(135deg, #ff4d4d 0%, #cc0000 100%);
+}
+
+.cmd-board-top-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, rgba(255, 42, 42, 0.12) 0%, rgba(20, 25, 33, 0.9) 100%);
+  border: 1px solid rgba(255, 42, 42, 0.3);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.cmd-board-top-banner h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.cmd-board-top-banner p {
+  font-size: 0.88rem;
+  color: #a0a8b5;
+  margin: 0;
+}
+
+.cmd-print-btn {
+  background: #232b36;
+  color: #ffffff;
+  border: 1px solid rgba(255, 42, 42, 0.4);
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.cmd-print-btn:hover {
+  background: #ff2a2a;
+  color: #ffffff;
+}
+
+.cmd-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cmd-search-input-box {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+}
+
+.cmd-search-input-box .search-ico {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff2a2a;
+  font-size: 1.1rem;
+}
+
+.cmd-search-input-box input {
+  width: 100%;
+  background: #0b0c10;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 12px 14px 12px 42px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cmd-search-input-box input:focus {
+  border-color: #ff2a2a;
+  box-shadow: 0 0 10px rgba(255, 42, 42, 0.3);
+}
+
+.cmd-cat-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cmd-cat-pills button {
+  background: #141921;
+  color: #a0a8b5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cmd-cat-pills button:hover,
+.cmd-cat-pills button.active {
+  background: rgba(255, 42, 42, 0.18);
+  color: #ffffff;
+  border-color: #ff2a2a;
+}
+
+.cmd-master-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: #0b0c10;
+}
+
+.cmd-master-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.cmd-master-table th {
+  background: #141a22;
+  color: #a0a8b5;
+  padding: 14px 16px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 42, 42, 0.3);
+}
+
+.cmd-master-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #d8dce2;
+  vertical-align: middle;
+}
+
+.cmd-master-table tr:hover {
+  background: rgba(255, 42, 42, 0.04);
+}
+
+.cmd-type-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.cmd-type-tag.tag-entrenador {
+  background: rgba(69, 183, 209, 0.15);
+  color: #45b7d1;
+  border: 1px solid #45b7d1;
+}
+
+.cmd-type-tag.tag-usuario {
+  background: rgba(78, 204, 163, 0.15);
+  color: #4ecca3;
+  border: 1px solid #4ecca3;
+}
+
+.cmd-type-tag.tag-staff {
+  background: rgba(254, 202, 87, 0.15);
+  color: #feca57;
+  border: 1px solid #feca57;
+}
+
+.cmd-type-tag.tag-admin {
+  background: rgba(255, 42, 42, 0.2);
+  color: #ff2a2a;
+  border: 1px solid #ff2a2a;
+}
+
+.cmd-user-title {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.cmd-phone-highlight {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.cmd-role-badge {
+  background: #19212b;
+  color: #e0e5eb;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cmd-status-pill {
+  color: #4ecca3;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.cmd-view-btn {
+  background: rgba(255, 42, 42, 0.15);
+  color: #ff4b4b;
+  border: 1px solid rgba(255, 42, 42, 0.3);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.cmd-view-btn:hover {
+  background: #ff2a2a;
+  color: #ffffff;
+}
+
+/* === REGLAS DE IMPRESIÓN (PDF) PRESERVANDO COLORES === */
+@media print {
+  body {
+    background-color: #0b0c10 !important;
+    color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .role-db-header,
+  .role-tab-nav,
+  .cmd-controls-bar,
+  .cmd-print-btn,
+  .cmd-view-btn,
+  .role-refresh-btn,
+  .sa-header-actions {
+    display: none !important;
+  }
+
+  .cmd-master-table-wrapper {
+    border: 1px solid #ff2a2a !important;
+  }
+
+  .cmd-master-table th {
+    background: #141a22 !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid #ff2a2a !important;
+  }
+
+  .cmd-master-table td {
+    color: #ffffff !important;
+    border-bottom: 1px solid #333 !important;
+  }
+}

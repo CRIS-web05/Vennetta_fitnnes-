@@ -1,0 +1,161 @@
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  box-sizing: border-box;
+  min-height:120px;
+  padding: 10px 180px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:rgba(5, 5, 5, 0.95);
+  z-index:1000;
+  overflow:hidden;
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(255,0,0,0.2);
+}
+
+/* 🔥 TEXTO LED */
+.led-text{
+  color:#ffffff;
+  font-size: clamp(22px, 2.5vw, 38px);
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-align:center;
+  font-weight:900;
+  letter-spacing:1.8px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+.led-white {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.led-red {
+  color: #ff1a1a;
+  text-shadow: 0 0 15px #ff0000, 0 0 30px rgba(255, 0, 0, 0.9);
+}
+
+/* 🔥 LINKS */
+.nav-links{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:18px;
+  list-style:none;
+  padding:0;
+  margin:0;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/* 🔥 BOTONES (AHORA MÁS GRANDES) */
+.nav-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+  padding:10px 28px;
+  border:2px solid rgb(230, 14, 14);
+  border-radius:30px;
+  background:transparent;
+  transition:all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255,0,0,0.35);
+  white-space: nowrap;
+}
+
+/* 🔥 HOVER PRO */
+.nav-btn:hover{
+  background:red;
+  color:white;
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 0 22px red, 0 0 40px rgba(255,0,0,0.6);
+}
+
+/* 🔥 LOGOS MÁS GRANDES E IMPONENTES */
+.nav-logo{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  height:185px;
+  width:auto;
+  object-fit:contain;
+  opacity:0.95;
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.7));
+  transition:0.3s;
+  pointer-events: auto;
+}
+
+/* 🔥 EFECTO HOVER LOGO */
+.nav-logo:hover{
+  transform:translateY(-50%) scale(1.05);
+  filter: drop-shadow(0 0 25px red);
+}
+
+/* POSICIONES */
+.nav-logo.left{
+  left:15px;
+}
+
+.nav-logo.right{
+  right:15px;
+}
+
+/* 🔥 RESPONSIVE PARA EL NAVBAR (EVITA LA DISTORSIÓN DE LOGOS Y LETRAS) */
+@media screen and (max-width: 1100px) {
+  .navbar {
+    padding: 10px 80px;
+  }
+  .nav-btn {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+  .nav-logo {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 15px 10px;
+  }
+  .nav-logo {
+    position: static;
+    transform: none;
+    height: 70px;
+  }
+  .nav-logo:hover {
+    transform: scale(1.05);
+  }
+  .nav-logo.right {
+    display: none;
+  }
+  .led-text {
+    font-size: clamp(16px, 4vw, 24px);
+    margin-top: 8px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .nav-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+.logout-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+

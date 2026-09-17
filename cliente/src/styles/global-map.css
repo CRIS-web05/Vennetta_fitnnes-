@@ -1,0 +1,40 @@
+.global-mapa-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.global-mapa-container h2 {
+  font-size: 45px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px red;
+  text-transform: uppercase;
+}
+
+.global-mapa-direccion {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.global-mapa-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255,0,0,0.5);
+  border: 1px solid rgba(255,0,0,0.3);
+}
+
+.global-mapa-wrapper iframe {
+  display: block;
+}

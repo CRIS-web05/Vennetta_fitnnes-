@@ -1,0 +1,267 @@
+/* 🔥 SECCIÓN */
+.logros{
+  padding: 280px 20px 100px;
+  background: #0a0a0a;
+  text-align: center;
+}
+
+/* 🔥 HEADER DE LOGROS */
+.logros-header {
+  margin-bottom: 60px;
+}
+.title-red {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 50px;
+  font-weight: 900;
+  text-shadow: 0 0 10px red;
+  letter-spacing: 2px;
+}
+.text-light {
+  color: #ccc;
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.text-cofit-promo {
+  color: #fff;
+  font-size: 26px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.text-cofit-promo span {
+  color: red;
+  font-weight: 900;
+  font-size: 34px;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+.text-cofit-promo strong {
+  color: #00ff88;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* 🔥 CONTADOR ARRIBA RECTO */
+.logros-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.conteo-title {
+  color: #ff2a2a;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px rgba(2, 2, 2, 0.6);
+  animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+  from { opacity: 0.8; text-shadow: 0 0 10px rgb(7, 7, 7); }
+  to { opacity: 1; text-shadow: 0 0 25px rgb(3, 3, 3), 0 0 10px rgba(255, 14, 14, 0.719); }
+}
+
+.timer.recto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.timer.recto div {
+  text-align: center;
+  min-width: 70px;
+}
+.timer.recto .divider {
+  font-size: 32px;
+  color: red;
+  font-weight: bold;
+  min-width: unset;
+  padding-bottom: 15px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; text-shadow: 0 0 15px red; }
+}
+
+.timer.recto span {
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  display: block;
+}
+
+.timer.recto p {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 500px) {
+  .timer.recto {
+    padding: 10px 15px;
+    gap: 5px;
+    flex-wrap: wrap; /* Para que en teléfonos chiquitos no se deforme */
+  }
+  .timer.recto div {
+    min-width: 50px;
+  }
+  .timer.recto span {
+    font-size: 24px;
+  }
+  .timer.recto .divider {
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+  .title-red {
+    font-size: clamp(30px, 8vw, 45px); /* Responsive title for small screens */
+  }
+}
+
+/* 🔥 MEDIA GRID (FOTO Y VIDEO IGUALES) */
+.logros-media-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.media-item {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  background: #111;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  box-shadow: 0 15px 35px rgba(255, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.media-item:hover {
+  transform: translateY(-10px);
+  border: 1px solid red;
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.3);
+}
+
+.video-wrapper, .img-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: black;
+}
+
+.video-wrapper video, .logros-img-pro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.media-item:hover .logros-img-pro,
+.media-item:hover .video-wrapper video {
+  transform: scale(1.05);
+}
+
+/* 🔥 BOTÓN PLAY PRO */
+.play-btn-pro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  color: white;
+  background: rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.play-btn-pro:hover {
+  background: red;
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 1);
+}
+
+.ubicacion-btn{
+  display: block;
+  margin: 50px auto 0;
+  padding: 12px 30px;
+  background: rgb(245, 20, 20);
+  color: rgb(247, 247, 247);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ubicacion-btn:hover{
+  background: rgb(151, 27, 23);
+  border: 1px solid red;
+  transform: translateY(-2px);
+}
+
+/* 🔥 MAPA */
+.mapa-planes{
+  margin-top:120px;
+  background: transparent;
+  padding: 0;
+}
+.mapa-planes h2 {
+  font-size:45px;
+  color:white;
+  margin-bottom:40px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-shadow:0 0 10px red;
+}
+.direccion {
+  color: #ccc;
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+.mapa-planes .mapa{
+  max-width:900px;
+  margin:auto;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 0 25px rgba(0,0,0,0.2);
+}

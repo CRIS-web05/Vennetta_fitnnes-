@@ -1,0 +1,122 @@
+/* CONTENEDOR FIJO */
+.redes-fijas {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea los botones a la derecha */
+  gap: 12px;
+  z-index: 100000;
+}
+
+/* BOTONES BASE (FLOTANTES) */
+.redes-fijas .btn-flotante {
+  height: 50px;
+  background: rgba(10, 10, 10, 0.85); /* Negro ligeramente transparente premium */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px; /* Forma de Píldora o Círculo */
+  font-size: 22px; /* Tamaño del Icono */
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5), inset 0 0 5px rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(5px);
+  overflow: hidden; /* Oculta texto fuera de control */
+}
+
+/* REDES SOCIALES ESCONDIDAS (Circulares por defecto) */
+.redes-fijas .btn-social {
+  width: 50px; /* Circulito inicial */
+  padding: 0;
+  gap: 0;
+}
+
+.redes-fijas .btn-social span {
+  max-width: 0;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Evita que quiebre líneas mientras se expande */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* EFECTO HOVER: Expande a Píldora interactiva */
+.redes-fijas .btn-social:hover {
+  width: 170px; /* Se vuelve píldora */
+  padding: 0 20px;
+  gap: 12px;
+  transform: scale(1.05) translateX(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+}
+
+.redes-fijas .btn-social:hover span {
+  max-width: 150px;
+  opacity: 1;
+}
+
+/* COLORES PRO AL PASAR EL RATÓN */
+.redes-fijas .btn-flotante:nth-child(1):hover { background: #e1306c; border-color: #e1306c; } /* Instagram */
+.redes-fijas .btn-flotante:nth-child(2):hover { background: #1877f2; border-color: #1877f2; } /* Facebook */
+.redes-fijas .btn-flotante:nth-child(3):hover { background: #333; border-color: #555; } /* TikTok */
+
+/* ======================================= */
+/* BOTÓN DE WHATSAPP CON TEXTO (EL ÚNICO FIJO) */
+/* ======================================= */
+.redes-fijas .btn-contacto {
+  width: auto;
+  padding: 0 20px;
+  gap: 12px;
+  background: rgba(37, 211, 102, 0.15); 
+  border: 1px solid rgba(37, 211, 102, 0.5);
+  color: #25d366; 
+}
+
+.redes-fijas .btn-contacto span {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Mismo color brillante para el hover de wsp */
+.redes-fijas .btn-contacto:hover { 
+  background: #25d366; 
+  color: #fff;
+  border-color: #25d366;
+  box-shadow: 0 5px 20px rgba(37,211,102,0.5);
+  transform: scale(1.05) translateX(-5px);
+}
+
+/* RESPONSIVO DE REDES SOCIALES PARA CELULARES */
+@media screen and (max-width: 768px) {
+  .redes-fijas {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+  .redes-fijas .btn-flotante {
+    height: 40px;
+    font-size: 18px; /* Icono más chico */
+  }
+  .redes-fijas .btn-social {
+    width: 40px; 
+  }
+  .redes-fijas .btn-social:hover {
+    width: 135px; /* Menos ancho de expansión en móvil */
+    padding: 0 12px;
+  }
+  .redes-fijas .btn-contacto {
+    padding: 0 12px;
+  }
+  .redes-fijas .btn-flotante span {
+    font-size: 10px; /* Texto miniaturizado */
+    letter-spacing: 0.5px;
+  }
+}
+
