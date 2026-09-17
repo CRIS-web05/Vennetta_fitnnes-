@@ -44,6 +44,7 @@ function Profile({ selectedLanguage, languageCount }) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [showAvatarMenu, setShowAvatarMenu] = useState(false);
 
   useEffect(() => {

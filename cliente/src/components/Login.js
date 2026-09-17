@@ -762,6 +762,7 @@ id: {
 }
 
 function Login({ onLoginSuccess, selectedLanguage, languageOptions, onLanguageChange }) {
+  // eslint-disable-next-line no-unused-vars
   const availableLanguages = languageOptions || [
     { code: "es", label: "Español", emoji: "🇪🇸" },
     { code: "en", label: "English", emoji: "🇬🇧" },
@@ -786,6 +787,7 @@ function Login({ onLoginSuccess, selectedLanguage, languageOptions, onLanguageCh
   ];
 
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const languageCode = selectedLanguage?.code || "es";
   const t = translations[languageCode] || translations["en"];
@@ -825,10 +827,12 @@ function Login({ onLoginSuccess, selectedLanguage, languageOptions, onLanguageCh
     setLanguageMenuOpen(false);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const handleLanguageSelect = (option) => {
     onLanguageChange(option);
     setLanguageMenuOpen(false);
   };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
